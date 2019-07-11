@@ -1,0 +1,60 @@
+//-----------------------------------------------------------
+// Project Created By : Sunil Patel
+// On Date : 12-November-2018
+// Project Name : eDiasoft
+//-----------------------------------------------------------
+@import '../mixin';
+$default-text:14px;
+$sm-text:12px;
+$lg-text:16px;
+$body-bg:#fff;
+$sidebar-bg:  #0096B3; // #fff;
+$sidebar-fonts-color: White; //#26253c;
+$card-bg:#fff;
+$card-border:transparent;
+$white:#fff;
+$black:#000;
+$border-color:#e6e6e6;
+$table-border-color:#e6e6e6;
+$fonts-color:#26253c;
+$primary: whitesmoke;// #fc6a60; //darkgray;// #0096B3; //#f09f0a;
+$secondary: White ; // whitesmoke;// #0096B3; //#f09f0a;
+$success:#29bdb6;
+$danger:#fa5167;
+$warning:#fc6a60;
+$info:#2cc3ff;
+body 
+{
+    background: $body-bg;
+    font-family: Verdana;
+}
+
+.bg-default 
+{
+    @include linear-gradient(to top right, darken($card-bg, 50%), darken($card-bg, 30%));
+}
+
+.bg-primary 
+{
+    @include linear-gradient(to top right, $primary, $info);
+}
+
+.bg-success 
+{
+    @include linear-gradient(to top right, $success, #42e697);
+}
+
+.bg-danger 
+{
+    @include linear-gradient(to top right, $danger, #fda09c);
+}
+
+.bg-warning 
+{
+    @include linear-gradient(to top right, $warning, #fca063);
+}
+
+.bg-info
+{
+    @include linear-gradient(to top right, $info, #15f8bf);
+}

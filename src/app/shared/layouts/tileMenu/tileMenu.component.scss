@@ -1,0 +1,136 @@
+/***************************************************************/
+@import '../../theme/conf';
+.lbl
+{
+    margin: auto;
+    width:145px;  
+    height: 120px;
+    padding-top: 20px;
+    cursor: progress;
+}
+.lbl:hover
+{
+    background-color: #eee;
+    cursor: pointer;
+}
+.menu-link 
+{
+    display: contents;
+    justify-content: space-around;
+    outline: none;
+    background: transparent;
+    border-left: 3px solid transparent;
+    color: $sidebar-fonts-color;
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    overflow: hidden;
+    cursor: pointer;
+    &:hover 
+    {            
+        background: transparent;
+    }
+    .placeholder,
+    .text,
+    .direction 
+    {
+       display: block;
+       font-size: $sm-text+1;
+    }
+    .placeholder 
+    {
+        background-image: url('../../../../assets/kgLogo.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 58% 58%;
+        height:55px ;
+        width: 60px !important;
+        border: 10px !important;
+        border-color: black;
+        background-blend-mode: soft-light;
+        padding: 15% 20% 15% 20%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .text { 
+        text-align: center;
+         color: black;
+        flex: 1; 
+        width: 100%;
+        margin-top: 10px;
+        font-size:  12px;
+        cursor: pointer;
+    }
+ }
+
+ input[name="browsers"] 
+ {
+    border: 2px solid #eee;
+    border-radius: 10px 10px 10px 10px;
+    //border-radius: 50px;
+    font-size: 16px;
+    margin-top: 50px;
+    padding: 10px;
+    height: 45px;
+    width: 68%;
+    background-color: #eee;
+    appearance: none;
+  }
+ 
+
+  .search-group 
+{
+    position: absolute;
+    top: 50%;
+    right: 235px;
+    transform: translate(0, -50%);
+    width: 260px;
+    background: $border-color;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    overflow:  hidden;    
+    .search-input 
+    {
+        width: 220px;
+        height: 35px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: black;// $sidebar-fonts-color;
+        font-size: 15px; //$sm-text;
+        text-indent: 1em;
+    }
+    .search-btn 
+    {
+        position: relative;
+        top: 1px;
+        right: -2px;
+        width: 35px;
+        height: 35px;
+        background: $sidebar-bg;// $primary;
+        border: 0;
+        border-radius: 20%;
+        outline: none;
+        line-height: 35px;
+        text-align: center;
+        color: white;// $body-bg;
+        transform: scale(0);
+        transition: all .4s;    
+                
+        &:hover 
+        {
+            background: lighten(orange, 10%);
+            transform: scale(1);
+            color: black;// $body-bg;
+            cursor: pointer;
+        }
+    }
+    .search-input:focus+.search-btn 
+    {
+        transform: scale(1);
+    }
+}
+
+  
+ 
+ 
+  

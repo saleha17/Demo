@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-3">
+    <card cardTitle='Diamond Clarity Chart'>
+      <div echarts [options]="BarOption" [loading]="showloading" theme="light" class="demo-chart"></div>
+    </card>
+  </div>  
+  <div class="col-md-3">
+    <card cardTitle='Diamond Clarity Chart'>
+      <div echarts [options]="LineOption" [loading]="showloading" theme="light" class="demo-chart"></div>
+    </card>
+  </div>
+  <!-- <div class="col-md-12">&nbsp;</div> -->
+  <div class="col-md-3">
+    <card cardTitle='Diamond Color Chart'>
+      <div echarts [options]="PieOption" [loading]="showloading" theme="light" class="demo-chart"></div>
+    </card>
+  </div>  
+  <div class="col-md-3">
+    <card cardTitle='Diamond Color Chart'>
+      <div echarts [options]="AnimationBarOption" [loading]="showloading" theme="light" class="demo-chart"></div>
+    </card>
+  </div>
+</div>

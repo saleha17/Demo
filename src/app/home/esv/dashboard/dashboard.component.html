@@ -1,0 +1,12 @@
+
+<div class="mt20" *ngIf="!showStoneData">
+  <div class="row marginMain" *ngFor="let row of data">
+    <div class="col-md-2 col-4 col-sm-3 col-xs-3"  *ngFor="let item of row;">
+      <button class="btn btn-block mt12" (click)="gotoStoneDetails(item)">
+        <label class="mt5">{{item.status}}</label><br/>
+        <label>[{{item.count}}]</label>
+      </button>
+    </div>
+  </div>
+</div>
+<app-stone-details *ngIf="showStoneData" [stoneDetails]="singleData" (valueChange)='displayCounter($event)'></app-stone-details>

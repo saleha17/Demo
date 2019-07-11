@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+
+$fontFamily : 'Verdana';
+html 
+{
+    font-family: $fontFamily !important;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body 
+{
+    font-family: $fontFamily !important;;
+    margin: 0;
+    color: #000;
+}
+
+
+.dtp-combo-main 
+{
+    margin: 5% 0 0 10%;
+}
+
+.dtp-combo-box 
+{
+    padding: 2% 0 2% 0;
+    color: orangered;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.dtp-combo-rule 
+{
+    margin-right: 10%;
+}
+
+.ngx-mat-drp-menu .ngx-mat-drp-presets-list li 
+{
+    margin: 5px 0 5px 0;
+    padding: 4%;
+    cursor: pointer;
+    background: #fafafa;
+    color: #53b53f;
+    user-select: none;    
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
+
+.form-control1 {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-left: 5px;
+  font-size: 12px;
+  border: 0px;
+  outline: 0px;
+  //line-height: normal;
+  //background-color: #fff;
+  //background-clip: padding-box;
+  //border-radius: 0.25rem;
+  //transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+
+

@@ -1,0 +1,38 @@
+<!-- <button class="config-switch" (click)="configToggle()">
+  <i class="fa fa-tasks"  *ngIf="!isConfigToggle"></i>
+  <i class="fa fa-chevron-right"  *ngIf="isConfigToggle"></i>  
+</button> -->
+<button class="config-switch" (click)="configToggle()">
+  <i class="fa fa-tasks"  *ngIf="!isConfigToggle"></i>
+  <i class="fa fa-chevron-right"  *ngIf="isConfigToggle"></i>  
+</button>
+<div class="right-config-wrap" [ngClass]="{'right-config-wrap-on':isConfigToggle}">
+  <div class="config-header">
+    <h3 class="config-title">
+      <i class="fa fa-puzzle-piece"></i>
+      <span> Department</span>
+    </h3>
+    <p class="desc">Choose Your Department</p>
+<!--mdi/changepass-->
+
+    <a class="desc pwdColor"  (click)="gotoLogin()" >Change Your Passowrd</a>
+  </div>
+  <ul class="config-content">    
+    <li class="config-list">
+      <span>GENERAL</span>
+      <switch switchName="single" (click)="refresh(0)" switchId="GENERAL" [checked]="intSessionLevel==0?true:false"></switch>
+    </li>
+    <li class="config-list">
+      <span>STORE</span>
+      <switch switchName="single" (click)="refresh(1)" switchId="STORE" [checked]="intSessionLevel==1?true:false"></switch>
+    </li>
+    <li class="config-list">
+      <span>PREDICT</span>
+      <switch switchName="single" (click)="refresh(2)" switchId="PREDICT" [checked]="intSessionLevel==2?true:false"></switch>
+    </li>
+    <li class="config-list">
+      <span>LAB</span>
+      <switch switchName="single" (click)="refresh(3)" switchId="LAB" [checked]="intSessionLevel==3?true:false"></switch>
+    </li>
+  </ul>
+</div>

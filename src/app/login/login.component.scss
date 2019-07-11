@@ -1,0 +1,321 @@
+@import '../shared/theme/conf.scss';
+@import '../shared/theme/loader.scss';
+
+.login-card 
+{
+    padding: 20px;
+    position: fixed;
+    background-color: lightgray;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    border-radius: 5%;
+    $top : -3px;
+    $left : -3px;
+    $blur: 0px;
+    $color: $primary;
+    $baseColor : $secondary;
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+
+    $fonts-color : black;
+    $hl : left;
+    $hc : center;
+    $hr : right;
+    $vt : top;
+    $vm : middle;
+    $vb : bottom;
+
+    .form-group 
+    {
+        padding: 0px;    
+        margin:  0px;
+        margin-left: -10px;             
+    }
+    .form-label 
+    {
+        display: block;
+        color: $fonts-color;
+        padding: 0px 5px;
+        text-align: $hr;        
+    }
+    .form-login-logo-sm
+    {
+        background-image: url("../imgs/small_kg_logo.png");
+        background-repeat: no-repeat;        
+        background-size: 300px 200px;
+        background-position: center;
+        background-position-y: -18px;
+        height: 200px;        
+        background-color: $baseColor;
+        border-radius: 50%;
+    }
+
+    .form-label-sub
+    {
+        display: block;
+        color:  $fonts-color;
+        padding: 0 10px;
+        text-align: $hc;
+    }
+    span.form-label 
+    {
+        color: lighten($fonts-color, 30%);
+    }
+    .input-group 
+    {
+        padding: 0;
+        margin: 0px 0;        
+        vertical-align:  left ;
+    }
+    .form-control 
+    {
+        background: whitesmoke;
+        color:  $fonts-color;
+    }
+    .input-group-addon 
+    {
+        background: transparent;
+        border: none;
+        font-size: $lg-text;
+        color:  $baseColor;
+        border-color: white;
+        vertical-align: middle;
+    }    
+    .btn 
+    {
+        width: 100%;
+        color:whitesmoke;
+        font-weight: 500;
+        background-color:$baseColor;
+    }
+    .btn-link 
+    {
+        margin: 10px 0;
+        color: lighten($fonts-color, 30%);
+    }
+}
+
+.divBorder 
+{
+    border-left: 4px solid #0096B3;
+    border-top: 2px solid #0096B3;
+    background-color: #FBFBFB;
+}
+
+.vericaltext 
+{
+    /*width: 1px;
+    word-wrap: break-word;
+    white-space: pre-wrap;*/
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+    color: #0096B3;
+    font-size: 10pt;
+    font-weight: bold;
+    letter-spacing: 3px;
+    bottom: 10px;
+    
+}
+
+.forHeaderColor 
+{
+    color: #0096B3;    
+    font-weight: bold;
+    text-align: right;
+    vertical-align: middle;
+    font-size:20px;    
+    margin-top: -15px;
+}
+
+.forColor
+{
+    color: #0096B3;    
+    font-weight: bold;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 12px;        
+}
+
+.EmpName 
+{
+    color: red;
+    font-size: 12px;
+    text-align: left;
+    font-weight: bold
+}
+
+.login-container
+{
+    position: relative;
+    width: 520px;    
+    margin: 100px auto;
+    padding: 20px 20px 5px 20px;
+    text-align: left;
+    background: #fff;
+    border: 1px solid #6b6b6b;
+}
+
+.loginButton 
+{
+    background-color: #FFF;
+    color: #0096B3;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #0096B3;
+    height: 40px;
+    // width: 90px;
+    padding-left: 25px;
+    margin-right: 5px;
+    // background-image: url('../imgs/login_btn.png');
+    background-repeat: no-repeat;
+    background-position-x: 5px;
+    background-position-y: 5px;
+    cursor: pointer;
+    
+}
+.btnLoginImage{
+    background-image: url('../imgs/login_btn.png');
+}
+
+
+#output 
+{
+    position: absolute;
+    width: 300px;
+    top: -75px;
+    left: 0;
+    color: #fff;
+}
+
+    #output.alert-success 
+    {
+        background: rgb(25, 204, 25);
+    }
+
+    #output.alert-danger 
+    {
+        background: rgb(228, 105, 105);
+    }
+
+
+.login-container::before, .login-container::after
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 3.5px;
+    left: 0;
+    background: #fff;
+    z-index: -1;
+    -webkit-transform: rotateZ(4deg);
+    -moz-transform: rotateZ(4deg);
+    -ms-transform: rotateZ(4deg);
+    border: 1px solid #ccc;
+}
+
+.login-container::after 
+{
+    top: 5px;
+    z-index: -2;
+    -webkit-transform: rotateZ(-2deg);
+    -moz-transform: rotateZ(-2deg);
+    -ms-transform: rotateZ(-2deg);
+}
+
+.avatar 
+{
+    width: 100px;
+    height: 100px;
+    margin: 10px auto 30px;
+    border-radius: 100%;
+    border: 2px solid #aaa;
+    background-size: cover;
+}
+
+.form-box input 
+{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    height: 40px;
+    border: 1px solid #ccc;
+    background: #fff;
+    transition: 0.2s ease-in-out;
+}
+
+    .form-box input:focus 
+    {
+        outline: 0;
+        background: #eee;
+    }
+
+    .form-box input[type="text"] 
+    {
+        border-radius: 5px 5px 0 0;
+    }
+
+    .form-box input[type="password"] 
+    {
+        border-radius: 0 0 5px 5px;
+        border-top: 0;
+    }
+
+.form-box button.login 
+{
+    margin-top: 15px;
+    padding: 10px 20px;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.form-login-logo
+{
+    top: 0px;
+    margin-top: -5px;
+    margin-left: 0px;
+    align-content: center;
+    // background-image: url("../imgs/logo.png");
+    background-repeat: no-repeat;        
+    background-size: 180px auto;// 150px;
+    background-position: 0px;
+    background-position-y: 0px;    
+    height: auto;              
+    background-color: #FBFBFB; 
+    
+}
+
+.loginBg{
+    background-image: url("../imgs/logo.png");
+}
+
+.form-data
+{
+    margin-left: 100px;
+    margin-top: -10px;
+}
+.forgotPwd{
+    font-size: 14px;
+    color: #0096b3 !important;
+    margin-top: -10px;
+    border-bottom: 2px solid;
+}
+.imgMargin{
+    float: left;margin-top: 10px
+}
+// 100% 
+// {
+//     opacity: 1;
+//     -webkit-transform: translateY(0);
+//     transform: translateY(0);
+// }
+
+

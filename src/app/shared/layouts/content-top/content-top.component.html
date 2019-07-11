@@ -1,0 +1,5 @@
+<div class="content-wrap">
+  <a routerLink="/home" *ngIf="routeTitle !== 'Home'" (click)="returnHome()">Home</a>
+  <i *ngIf="routeTitle !== 'Home'">/</i>
+  <span>{{routeTitle}}</span>
+</div>

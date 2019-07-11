@@ -1,0 +1,40 @@
+<div *ngIf="isAdminMenu">
+  <div class="row">
+      <div class="col-md-4  "></div>  
+      <div class="col-md-4  kgDashboardBack" >
+          <!-- <img src="../../assets/KGLOGO.jpg"   style="position:relative; left: 45%; padding-top: 0px;  height: 13%;" /> -->
+      </div>
+      <div class="col-md-4  "></div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6 center " style="text-align: center;">           
+      <input id="cmbPageList1"  [(ngModel)]="cmbPageList" class="col-md-12"  list="browsers" name="browsers" placeholder=" Select Page" (change)="_selectItemchange($event)" (keydown)="keyDownEvent($event)" >
+      <datalist id="browsers" class="col-md-12">
+        <option value="{{item.title}}" class="col-md-12" *ngFor="let item of menuInfo"    > 
+          {{item.title}}
+        </option> 
+      </datalist>
+    </div>
+    <div class="col-md-3  "></div>
+  </div>
+    
+  <div class="row" style="margin-top: 10px;" >
+      <div class="col-md-2" ></div>
+      <div class="col-md-8" >
+        <label class="lbl" *ngFor="let item of menuInfo" >
+            <!-- <a [routerLink]="[item.routerLink.join('/')]" *ngIf="item.routerLink" routerLinkActive="active" class="menu-link col-md-1" (click)="_selectItem(item)">  -->
+              <a  class="menu-link col-md-1" (click)="_selectItem(item)"> 
+
+              <div class="btn placeholder center col-md-1">
+                <i class="fa fa-{{item.icon}} fa-fw"></i>
+              </div>
+              <span class="text center">{{item.title}}</span>
+            </a>
+          </label>
+      </div>   
+      <div class="col-md-2" ></div>
+  </div>
+</div>
+<app-dashboard *ngIf="showDashboard"></app-dashboard>

@@ -1,0 +1,123 @@
+<img src="../../assets/logo.svg"  style="position:fixed; top:0px; left:48%;z-index:10000000;" />
+<div class="navbar navbar-inverse navbar-fixed-top" style=" border-bottom: solid 1px black; height:50px; background-color:#0096B3;font-family: Verdana !important;">  
+</div>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" *ngIf="parameterName=='login'">
+    <div class="container card-block">       
+      <div class="login-container">
+          <div class="row">
+              <div class="col-sm-12 forHeaderColor">
+                  <span class="pull-left">User Login</span>
+              </div>
+          </div>
+          <div class="row divBorder">
+              <div class="col-sm-12" style="background-color: #FBFBFB; margin-top:0px;">
+                  <div class="col-sm-1" style="bottom:-50px; padding:5px;">
+                    <div class="vericaltext">e&nbsp;-&nbsp;DiaSoft</div>
+                  </div>
+                  <div class="col-sm-11"> 
+                      <div class="col-sm-12 form-login-logo loginBg" > 
+                          <div class="col-sm-12 form-data" >
+                              <div class="box">
+                                  <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label forColor ">User&nbsp;Name</label>
+                                      <div class="col-sm-8" >
+                                        <div class="input-group">
+                                          <input required class="form-control with-primary-addon text-left forColor" placeholder="User Name" #Name formControlName="UserName" name="UserName"  type="text">
+                                        </div>
+                                      </div>                                      
+                                  </div>
+                                  <div class="form-group row">
+                                      <label class="col-sm-4 col-form-label forColor">Password</label>
+                                      <div class="col-sm-8">
+                                        <div class="input-group">
+                                          <input class="form-control with-primary-addon text-left forColor" placeholder="Password" #Password formControlName="Password" name="Password" type="password">
+                                        </div>    
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">                              
+                                      <div class="col-sm-12 ">                                  
+                                          <button  class="loginButton pull-right btnLoginImage" type="submit">&nbsp;&nbsp;Login</button>    
+                                      </div>
+
+                                  </div>
+                                 <!-- <a class="pull-right forgotPwd" (click)="forgotPassword()">Change Password?</a> -->
+
+                              </div>
+                          </div>
+                      </div>                      
+                  </div>                  
+              </div>
+          </div>
+          <div class="showErrorClass">
+                {{displayError}}
+          </div>
+      </div>      
+    </div>
+</form>
+<form [formGroup]="forgotPwdFrm" (ngSubmit)="forgotPwdValidation()"  *ngIf="parameterName=='forgotPassword'">
+  
+    <div class="container card-block">       
+      <div class="login-container">
+          <div class="row">
+              <div class="col-sm-12 forHeaderColor">
+                  <span class="pull-left">Change Password</span>
+              </div>
+          </div>
+          <div class="row divBorder">
+              <div class="col-sm-12" style="background-color: #FBFBFB; margin-top:0px;">
+                  <div class="col-sm-1" style="bottom:-50px; padding:5px;">
+                    <div class="vericaltext">e&nbsp;-&nbsp;DiaSoft</div>
+                  </div>
+                  <div class="col-sm-11"> 
+                      <div class="col-sm-12 form-login-logo" > 
+                        <div  class="imgMargin"><img height="120" width="100"  [src]="imageSrc"></div>
+                          <div class="col-sm-12 form-data" >
+                              <div class="box">
+                                        <div class="form-group row">
+                                            <label class="col-sm-5 col-form-label forColor">Old Passowrd</label>
+                                            <div class="col-sm-7" >
+                                              <div class="input-group">
+                                                <input required class="form-control with-primary-addon text-left forColor" placeholder="Enter Passowrd" #oldPassword formControlName="oldPassword" name="oldPassword"  type="password">
+                                              </div>
+                                            </div>                                      
+                                        </div>
+                                  <div class="form-group row" >
+                                      <label class="col-sm-5 col-form-label forColor">New Passowrd</label>
+                                      <div class="col-sm-7" >
+                                        <div class="input-group">
+                                          <input required class="form-control with-primary-addon text-left forColor" placeholder="Enter New Passowrd" #newPassword formControlName="newPassword" name="newPassword"  type="password">
+                                        </div>
+                                      </div>                                      
+                                  </div>
+                                  <div class="form-group row">
+                                      <label class="col-sm-5 col-form-label forColor">Confirm Password</label>
+                                      <div class="col-sm-7">
+                                        <div class="input-group">
+                                          <input class="form-control with-primary-addon text-left forColor" placeholder="Confirm Password" #confirmPassword formControlName="confirmPassword" name="confirmPassword" type="password">
+                                        </div>    
+                                      </div>
+                                  </div>
+                                  <div class="form-group row">                              
+                                      <div class="col-sm-12 ">                                  
+                                          <button  class="loginButton pull-right" type="submit">Change Passowrd</button>    
+                                      </div>
+                                  </div>
+                                  
+                                  <!-- <a class="pull-right forgotPwd" (click)="login()">User Login</a> -->
+                              </div>
+                          </div>
+                      </div>                      
+                  </div>                  
+              </div>
+          </div>
+          <div class="showErrorClass">
+                {{displayError}}
+          </div>
+      </div>      
+    </div>
+</form>
+<div [class.hidden]="!show">
+    <div class="loader-overlay">
+        <div *ngIf="show" class="loader"></div>
+    </div>
+</div>
